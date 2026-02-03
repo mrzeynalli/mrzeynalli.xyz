@@ -37,8 +37,8 @@ html[data-theme="dark"] {
 }
 
 @theme inline {
-  --font-app: "Atkinson", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  /* --font-app: "Inter", system-ui, sans-serif; */
+  /* --font-app: "Atkinson", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; */
+  --font-app: "Inter", system-ui, sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
