@@ -26,7 +26,7 @@ The objective of this project is to conduct a comprehensive analysis of Scottish
 
 ---
 
-![Photo by Adam Wilson on Unsplash](/images/scottish_state_schools_clustering/1.webp)
+![Photo by Adam Wilson on Unsplash](src/assets/images/scottish_state_schools_clustering/1.webp)
 *Photo by Adam Wilson on Unsplash*
 
 The educational institutions in Scotland hold significant influence over the country's economy. Scotland's socio-demographic governmental structure places substantial emphasis on investing in the education of its population, as evidenced by the provision of free meals in all state schools. The economic status of local areas is largely determined by the location and prestige of state schools, with real estate prices being particularly dependent on this factor. Therefore, the level of deprivation in schools is a crucial determinant of areas that require further attention from either the government or non-governmental organizations. In this project, my objective is to assist concerned institutions in gaining a better understanding of the distribution of schools and the local authorities to which they are assigned.
@@ -52,12 +52,12 @@ Initially, a descriptive analysis was conducted on the collected information fro
 - 4 quintile — 557 school
 - 5 quintile — 285 school
 
-![Figure 1: Total number of pupils and schools per school type](/images/scottish_state_schools_clustering/2.webp)  
+![Figure 1: Total number of pupils and schools per school type](src/assets/images/scottish_state_schools_clustering/2.webp)  
 *Figure 1: Total number of pupils and schools per school type*
 
 The data presented in **Figure 1** illustrates the distribution of schools and pupils across various school types. It is evident that primary schools hold the majority in terms of both school count and pupil enrollment. Notably, the number of secondary schools is disproportionately low in comparison to the significant number of pupils. Special schools represent a minority within the overall distribution.
 
-![Figure 2: TOP10 Scottish local authorities with the highest number of pupils and schools](/images/scottish_state_schools_clustering/3.webp)  
+![Figure 2: TOP10 Scottish local authorities with the highest number of pupils and schools](src/assets/images/scottish_state_schools_clustering/3.webp)  
 *Figure 2: TOP10 Scottish local authorities with the highest number of pupils and schools*
 
 **Figure 2** displays the pupil and school statistics for the top 10 local authorities. Notably, Glasgow city, Edinburgh city, and Fife emerge as the frontrunners in terms of pupil population, whereas Highland, Glasgow, and Aberdeenshire dominate the representation of schools. A noteworthy observation is the significant concentration of pupils in Edinburgh, the capital city of Scotland, despite the relatively lower number of schools. Conversely, Highland boasts the highest number of schools, despite having a comparatively smaller pupil population.
@@ -118,7 +118,7 @@ ax = ax.set(xlabel = 'Number of Clusters (k)',
 
 The provided codes generate **Figure 3**, which allows for the observation that the scores exhibit minimal variation beyond the value of 3. Consequently, it can be inferred that 3 is the optimal k, as determined through the utilization of the WCSS method.
 
-![Figure 3: Within-Cluster Sum of Squares method results](/images/scottish_state_schools_clustering/4.webp)  
+![Figure 3: Within-Cluster Sum of Squares method results](src/assets/images/scottish_state_schools_clustering/4.webp)  
 *Figure 3: Within-Cluster Sum of Squares method results*
 
 However, this cannot be the sole basis for formulating three clusters. Therefore, it is necessary to run the Silhouette method as well.
@@ -153,7 +153,7 @@ ax = ax.set(xlabel = 'Number of Clusters (k)',
 
 **Figure 4** below represents the outcome of the aforementioned codes, displaying the results of Silhouette testing. The chart unequivocally indicates that 3 possesses the highest average silhouette score. Consequently, this test execution ultimately determines 3 as the optimal value for *k*, as well.
 
-![Figure 4: Silhouette method results](/images/scottish_state_schools_clustering/5.webp)  
+![Figure 4: Silhouette method results](src/assets/images/scottish_state_schools_clustering/5.webp)  
 *Figure 4: Silhouette method results*
 
 As both tests have indicated that the optimal value for *k* is 3, we can proceed with confidence to implement clustering with 3 clusters. The subsequent sub-section will construct the k-Means clustering and elucidate its outcomes.
@@ -192,7 +192,7 @@ The localities in this group have a lower number of pupils but a fair deprivatio
 The scatter plot in Figure 5 illustrates the assignment of each locality to its respective cluster.  
 Zoom image will be displayed
 
-![Figure 5: Scottish local authorities clustering](/images/scottish_state_schools_clustering/6.webp)  
+![Figure 5: Scottish local authorities clustering](src/assets/images/scottish_state_schools_clustering/6.webp)  
 *Figure 5: Scottish local authorities clustering*
 
 The complete list of localities in each cluster is provided below:

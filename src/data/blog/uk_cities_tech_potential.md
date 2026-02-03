@@ -29,7 +29,7 @@ This project is carried out by me under a final assignment for one of my courses
 
 This project aims to scrape the data of the tech companies in the UK and figure out the main tech areas (cities) besides London, the capital of the UK. The idea is to decentralize the tech processes from the capital city. The results of this project can be beneficial for people seeking low-competitive employment in the tech sphere or investors seeking conservative investment options in the UK tech arena.
 
-![Photo by Rodrigo Santos on Unsplash](/images/uk_cities_tech_potential/1.webp)  
+![Photo by Rodrigo Santos on Unsplash](src/assets/images/uk_cities_tech_potential/1.webp)  
 *Photo by Rodrigo Santos on Unsplash*  
 
 ## Data Collection and Cleaning
@@ -231,12 +231,12 @@ Next, I filtered the companies on a condition to keep the cities what are not Lo
 
 *Matplotlib* and *seaborn* libraries were used for the purpose of visualization. The following figures were drawn to illustrate the results.  
 
-![Figure 1: Proportion of Tech Companies in TOP10 Non-Capital Cities of UK](/images/uk_cities_tech_potential/2.webp)  
+![Figure 1: Proportion of Tech Companies in TOP10 Non-Capital Cities of UK](src/assets/images/uk_cities_tech_potential/2.webp)  
 *Figure 1: Proportion of Tech Companies in TOP10 Non-Capital Cities of UK*  
 
 **Figure 1** displays the 10 non-capital UK cities that have the highest proportion of tech companies. Manchester, Birmingham, and Bristol are the main non-capital cities with tech firms. They, respectively, capture 19.1%, 14.0%, and 10.6% of the total distribution of tech companies for non-capital cities. They are followed by Cambridge (10.6%), Nottingham (8.9%), and Cardiff (8.0%). Leeds, Coventry, Reading, and Sheffield are the other cities that made it to TOP10.  
 
-![Figure 2: Tech Companies in TOP 10 Non-Capital Cities of UK per Company Status](/images/uk_cities_tech_potential/3.webp)  
+![Figure 2: Tech Companies in TOP 10 Non-Capital Cities of UK per Company Status](src/assets/images/uk_cities_tech_potential/3.webp)  
 *Figure 2: Tech Companies in TOP 10 Non-Capital Cities of UK per Company Status*  
 
 Regarding active tech companies, Birmingham leads the way with above 120 companies, passing Manchester and Cambridge, both of which have nearly 100 active tech firms. While not huge variations are experienced with the rest of the cities, Coventry is found to have the lowest number of active firms (**Figure 2**).  

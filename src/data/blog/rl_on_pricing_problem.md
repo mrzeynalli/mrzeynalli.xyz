@@ -22,7 +22,7 @@ description: "A technical implementation of the Actor-Critic algorithm to solve 
 
 ---
 
-![](/images/rl_on_pricing_problem/dynamic_pricing.png)  
+![](src/assets/images/rl_on_pricing_problem/dynamic_pricing.png)  
 
 ## Problem Statement  
 
@@ -189,15 +189,15 @@ These values show that Actor-Critic not only converges to near-optimal solutions
 ### Figures and Interpretations
 
 **Figure 1: Histogram of learned optimal prices**
-![Figure 1: Histogram of learned optimal prices](/images/rl_on_pricing_problem/1.png)
+![Figure 1: Histogram of learned optimal prices](src/assets/images/rl_on_pricing_problem/1.png)
 Most simulations converge near the optimal price of 43. Some spread remains due to exploration noise, but the concentration proves that Actor-Critic is capable of discovering the true optimum from scratch.
 
 **Figure 2: Mean smoothed rewards across episodes**
-![Figure 3: Mean smoothed rewards](/images/rl_on_pricing_problem/2.png)
+![Figure 3: Mean smoothed rewards](src/assets/images/rl_on_pricing_problem/2.png)
 Average reward increases sharply and stabilizes after \~5,000 episodes. This demonstrates **early convergence**—a key strength of Actor-Critic relative to value-only methods.
 
 **Figure 3: Convergence to optimal price**
-![Figure 4: Convergence of Actor-Critic](/images/rl_on_pricing_problem/3.png)
+![Figure 4: Convergence of Actor-Critic](src/assets/images/rl_on_pricing_problem/3.png)
 The convergence curve shows how exploration covers a wide price range early but gradually narrows around the global optimum at 43. The algorithm maintains occasional exploration, but the focus is clearly locked on the optimal solution.
 
 ---

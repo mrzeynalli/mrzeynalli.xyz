@@ -23,7 +23,7 @@ description: "A comprehensive analysis of 160,000 visitor clickstreams using Pyt
 
 Companies receive traffic to their website from various resources. The more a company learns about the visitors' traffic to its website, the better it understands the reasons behind their travel to the website. Besides the number of visitors to a website, it is important to learn from which sources those people arrive at the website. This can help the firms to see which external social account or network campaign is prone to bringing new customers. Furthermore, a company can also see the patterns in the behaviour of the visitors on different pages. By using various page analytics techniques, successful as well as problematic pages can be detected.
 
-![Photo by Adem AY on Unsplash](/images/website_analytics_clickstream/1.webp)  
+![Photo by Adem AY on Unsplash](src/assets/images/website_analytics_clickstream/1.webp)  
 *Photo by Adem AY on Unsplash*
 
 In this project, I used web analytics techniques to analyze the potential of three marketing campaigns run by a hypothetical company.
@@ -228,15 +228,15 @@ Observing **Table 2**, we can see the visit statistics filtered by platform. It'
 ### Over graphs
 I analyzed the traffic to the website and found significant differences in visits, conversion rates, and bounce rates among the three advertisement campaigns. LinkedIn had the highest conversion rate at 25%, followed by Partner Websites at 11% and Facebook at 1%.
 
-![Conversion rates graph](/images/website_analytics_clickstream/4.webp)
+![Conversion rates graph](src/assets/images/website_analytics_clickstream/4.webp)
 
 The bounce rate for Facebook was 43%, while the other two campaigns had no such visitors. Interestingly, visitors from shared posts on social media and search engines generated more traffic than the advertisements. Direct traffic had the highest conversion rate at 32%, followed by search engine visitors at 15%, and shared posts on Facebook and LinkedIn at 13% and 12%, respectively.
 
-![Traffic sources graph](/images/website_analytics_clickstream/5.webp)
+![Traffic sources graph](src/assets/images/website_analytics_clickstream/5.webp)
 
 Mobile visitors were much more numerous than desktop visitors, but desktop visitors had a slightly higher conversion rate and lower bounce rate. IOS platform visitors had a 25% drop-out rate, while other platforms had a 22% rate (except for unknown visitors at 24%). Visitors had difficulty navigating beyond the 'Blog 1' page, with a 10% bounce rate for desktop users and a 6% bounce rate for IOS and Android users. The 'Home' page had a 9% bounce rate for desktop users and a 6% bounce rate for IOS and Android users. Blog 1 was the most challenging page for visitors, but 24% of visitors who completed a successful purchase had read it. Blog 2 had a 19% success rate.
 
-![Page performance graph](/images/website_analytics_clickstream/6.webp)
+![Page performance graph](src/assets/images/website_analytics_clickstream/6.webp)
 
 To increase conversion rates and reduce bounce rates, the company should invest more in LinkedIn advertisements and improve its search engine optimization. It should also improve the layout of 'Blog 1' and 'Home' pages, especially for Windows and Mac users. Additionally, it should write more blogs similar to the content of Blog 1 to contribute to higher conversion rates.
 

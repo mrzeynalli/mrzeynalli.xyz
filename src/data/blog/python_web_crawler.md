@@ -22,7 +22,7 @@ In this article, I’m going to explain the concept of a web crawler, how search
 * *IDE:* Microsoft Visual Studio Code
 * *Project type:* Web crawling/scraping
 
-![Photo by Timothy Dykes on Unsplash](/images/web_crawler/1.webp)
+![Photo by Timothy Dykes on Unsplash](src/assets/images/web_crawler/1.webp)
 *Photo by Timothy Dykes on Unsplash*
 
 As the name suggests, a web crawler is an application that explores the web like a spider, gathering the desired information. Well-known search engines like Google, Bing, and Yahoo have incredibly fast crawlers that navigate the internet in a matter of seconds (although they don’t crawl the entire web all the time, they minimize the number of web pages to consider using indexing). The good news is, you too can create your own web crawler using Python, and it only requires around 100 lines of code (actually, it’s exactly 100 lines!).
@@ -170,7 +170,7 @@ The crawling process begins by checking the URL’s validity using the previousl
 Before returning the dictionary with lists as keys and content as values, the function also saves the information as a JSON file in a folder created in the current working directory. To accomplish this, the **JSON** and **OS** modules of Python are used. The folder name is defined and joined with the current directory using *os.path.join*. The function checks if the folder already exists with *os.isdir(foldername)*. If it doesn’t exist, the function creates the folder and dumps the dictionary information into a JSON file within the created folder.
 
 # Can I crawl the entire web?
-![Photo by Timothy Dykes on Unsplash](/images/web_crawler/2.webp)
+![Photo by Timothy Dykes on Unsplash](src/assets/images/web_crawler/2.webp)
 *Photo by Timothy Dykes on Unsplash*
 
 While it is technically possible to crawl a large portion of the clear web (unlike the dark web), it’s important to be aware of legal and ethical considerations. Some websites have specific permissions regarding web crawling, and not adhering to these permissions can lead to legal and ethical issues. Therefore, it’s always best practice to ensure proper authorization before proceeding with web crawling activities. You can usually find the necessary authorization information in the website’s “robots.txt” file. Take a moment to review this file and follow its guidelines.

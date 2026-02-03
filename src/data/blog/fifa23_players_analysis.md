@@ -28,7 +28,7 @@ This project is carried out by me independently. The dataset is obtained publicl
 
 FIFA 23 is a football video game created by Electronic Arts (EA). It became the best-selling football video game in [Christmas UK retail charts](https://www.gamesindustry.biz/fifa-is-christmas-no1-as-god-of-war-drops-to-third-place-uk-boxed-charts#:~:text=FIFA%2023%20was%20the%20best,a%2013%25%20boost%20in%20sales.). According to [EA statistics](https://www.ea.com/games/fifa/news/fifa-23-all-leagues-clubs-teams-list#:~:text=With%20more%20than%2019%2C000%20players,%2C%20Bundesliga%2C%20LaLiga%20Santander%2C%20CONMEBOL), the game contains more than 700 teams with over 19,000 football players, playing in at least 30 football leagues. The data used in this project is taken from [Kaggle](https://www.kaggle.com/datasets/bryanb/fifa-player-stats-database). The objective of this project is to classify the players into various segments.
 
-![Photo by Hatem Boukhit on Unsplash](/images/fifa23_players_analysis/1.webp)
+![Photo by Hatem Boukhit on Unsplash](src/assets/images/fifa23_players_analysis/1.webp)
 *Photo by Hatem Boukhit on Unsplash*
 
 Although I implemented this project just out of my interest in football and my general engagement in playing the FIFA video game, the results may be helpful for any external observer such that the valuation of players might be determined or justified based on the segment they are in. Additionally, a team's success may be tested over the number of players from each segment with the purpose of finding out any correlation.
@@ -132,17 +132,17 @@ I eliminated 11 features based on whether they are non-useful for the analysis o
 I created a couple of pre-analytics graphs to get a better understanding of the data I am working with. *Seaborn* and *matplotlib* modules were used for visualization purposes.
 
 *Figure 1: Overall Rating Score of players per their Preferred Foot*
-![Figure 1: Overall Rating Score of players per their Preferred Foot](/images/fifa23_players_analysis/2.webp)
+![Figure 1: Overall Rating Score of players per their Preferred Foot](src/assets/images/fifa23_players_analysis/2.webp)
 
 **Figure 1** displays how the players are distributed on their rating score based on their preferred foot. There seems to be not a big difference between the feet. However, a very slight superiority can be observed for the left foot (presumably, because of [Leo Messi the GOAT](https://www.imdb.com/title/tt11905864/)).
 
 *Figure 2: Scatter plot of Overall Rating Score and Age*
-![Figure 2: Scatter plot of Overall Rating Score and Age](/images/fifa23_players_analysis/3.webp)
+![Figure 2: Scatter plot of Overall Rating Score and Age](src/assets/images/fifa23_players_analysis/3.webp)
 
 When it comes to the relationship between age and overall rating, an apparent positive linear relationship is visible (**Figure 2**). Seemingly, the greater the age of the player, the higher the rating is. The relationship seems to fade away after the age of 35.
 
 *Figure 3: Correlation matrix*
-![Figure 3: Correlation matrix](/images/fifa23_players_analysis/4.webp)
+![Figure 3: Correlation matrix](src/assets/images/fifa23_players_analysis/4.webp)
 
 The correlation among the numeric variables of the dataset can be seen in **Figure 3**. High correlation scores are visible between Wage and Value, Height and Weight, Value and Overall, and Value and Potential. Although Overall Rating and Age are highly positively correlated, interestingly, there is not much correlation between Potential and Age. This signals that the young players who do not have high overall at the moment can increase their rating score substantially.
 
@@ -153,12 +153,12 @@ Initially, the numeric features need to be scaled, given the fact that the prese
 For specifying the best number of clusters, I carried out Within-Cluster Sum of Squares (WCSS) and Average Silhouette methods.
 
 *Figure 4: WSCC method*
-![Figure 4: WSCC method](/images/fifa23_players_analysis/5.webp)
+![Figure 4: WSCC method](src/assets/images/fifa23_players_analysis/5.webp)
 
 WSCC method calculates the cluster differences for each cluster number. By observing the above plot (**Figure 4**) for each k, it can be observed that the variations tend to slow down after around 5. Thus, the graph signals 5 to be the best number of clusters.
 
 *Figure 5: Average Silhouette method*
-![Figure 5: Average Silhouette method](/images/fifa23_players_analysis/6.webp)
+![Figure 5: Average Silhouette method](src/assets/images/fifa23_players_analysis/6.webp)
 
 In the average silhouette method, the distances between neighboring cluster items and local cluster items are calculated. **Figure 5** shows the final average silhouette scores for each k cluster number. Accordingly, the highest score signals the best k (besides 2).
 

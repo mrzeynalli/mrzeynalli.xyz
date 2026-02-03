@@ -22,7 +22,7 @@ description: "An A-grade University of Edinburgh project utilizing Python and NL
 
 In 2018, former President of South Africa, Jacob Zuma, established a commission of enquiry in state capture, known as The Judicial Commission of Inquiry into Allegations of State Capture, Corruption and Fraud in the Public Sector including Organs of State, or simply the Zondo Commission. The commission collected one exabyte of evidence, and on 22 June 2022 released its final report. The reports are available publicly in this link.
 
-![Image is taken from www.corruptionwatch.org.za](/images/zondo_reports/1.jpeg)
+![Image is taken from www.corruptionwatch.org.za](src/assets/images/zondo_reports/1.jpeg)
 *Image is taken from [www.corruptionwatch.org.za](https://www.corruptionwatch.org.za)*
 
 This project aims to analyze the contents of these reports to capture the names of publicly traded companies whose names are mentioned more frequently. The results would be beneficial for prudent investors who seek ethical investments opportunities in South Africa.
@@ -148,12 +148,12 @@ Next, we used *FreqDist* function from *nltk.probability* to calculate how many 
 *Matplotlib* and *seaborn* libraries were used for the purpose of visualization. The following figures were drawn to illustrate the results.
 
 *Figure 1: The frequency of company name mentions by sector*
-![Figure 1: The frequency of company name mentions by sector](/images/zondo_reports/2.jpeg)
+![Figure 1: The frequency of company name mentions by sector](src/assets/images/zondo_reports/2.jpeg)
 
 **Figure 1** shows how many times the names of companies in each sector is mentioned in the reports. Banking companies top the chart, by having 236 name mentions in total. It is followed by Mining, Software&Computing Services, and Media, by being mentioned 197, 110, and 76 times, respectively.
 
 *Figure 2: Frequency of mentions for company*
-![Figure 2: Frequency of mentions for company](/images/zondo_reports/3.jpeg)
+![Figure 2: Frequency of mentions for company](src/assets/images/zondo_reports/3.jpeg)
 
 **Figure 2** clearly depicts the company names that were mentioned in the reports. Glencore Plc is the company with the highest quantity of mentions (190). Standard Bank Group Limited and Nedbank Group Limited are the main banks whose names are widely used in the reports. The following are the EOH Holding Limited and MultiChoice Group Limited.
 

@@ -3,35 +3,87 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-AstroPaper is a minimal, accessible and SEO-friendly blog theme built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
+I am a PhD candidate in **Business Analytics & Operations Management** with strong academic training and applied experience in data-driven decision-making. My work focuses on transforming complex data into actionable insights for forecasting, optimization, and strategic planning problems. My thesis involves inventory management of ATM cash allocation and forecasting of cash demand.
 
-![Astro Paper](public/astropaper-og.jpg)
+In parallel with my academic work, I am an active **quantitative trader**, applying statistical and data-driven methods to financial markets.
 
-AstroPaper provides a solid foundation for blogs, or even portfolios\_ with full markdown support, built-in dark mode, and a clean layout that works out-of-the-box.
+---
 
-The blog posts in this theme also serve as guides, docs or example articles\_ making AstroPaper a flexible starting point for your next content-driven site.
+## Profile Highlights
 
-## Features
+- Applied researcher at the intersection of **analytics, operations, and decision science**
+- Strong focus on **forecasting, optimization, and uncertainty-aware modeling**
+- Experience translating quantitative models into **business-relevant insights**
+- Active **quantitative trader** with a strong interest in systematic and data-driven trading strategies
+- Comfortable working across **research-oriented and industry-facing environments**
 
-AstroPaper comes with a set of useful features that make content publishing easy and effective:
+---
 
-- SEO-friendly
-- Fast performance
-- Light & dark mode
-- Highly customizable
-- Organizable blog posts
-- Responsive & accessible
-- Static search with [PageFind](https://pagefind.app/)
-- Automatic social image generation
+## Core Expertise
 
-and so much more.
+- **Analytics & Modeling**
+  - Demand forecasting and time-series analysis  
+  - Optimization and inventory / capacity planning  
+  - Simulation and decision-making under uncertainty  
 
-## Show your support
+- **Quantitative Methods**
+  - Statistical modeling and empirical analysis  
+  - Machine learning for structured and tabular data  
+  - Performance measurement and model evaluation  
 
-If you like [AstroPaper](https://github.com/satnaing/astro-paper), consider giving it a star ⭐️.
+- **Quantitative Trading & Markets**
+  - Systematic analysis of market data across asset classes  
+  - Market regime detection using statistical and machine learning models  
+  - Strategy research based on historical price, volume, and volatility dynamics  
 
-Found a bug 🐛 or have an improvement ✨ in mind? Feel free to open an [issue](https://github.com/satnaing/astro-paper/issues), submit a [pull request](https://github.com/satnaing/astro-paper/pulls) or start a [discussion](https://github.com/satnaing/astro-paper/discussions).
+---
 
-If you find this theme helpful, you can also [sponsor me on GitHub](https://github.com/sponsors/satnaing) or [buy me a coffee](https://buymeacoffee.com/satnaing) to show your support — every penny counts.
+## Tools & Technologies
 
-Kyay zuu! 🙏🏼
+- **Programming / Coding**
+  - Python, SQL  
+
+- **Data Visualization & Dashboards**
+  - Tableau, Power BI, Matplotlib  
+
+- **Databases**
+  - PostgreSQL, MongoDB  
+
+- **Cloud Platforms**
+  - AWS, Azure, Oracle Cloud  
+
+---
+
+## Markets & Instruments
+
+- **Asset Classes**
+  - Equities, Futures, Options, Forex, Cryptocurrencies  
+
+- **Derivatives Knowledge**
+  - Options pricing concepts, volatility, and Greeks  
+  - Futures and derivative-based hedging and speculation  
+
+---
+
+## Education
+
+- **PhD in Business Analytics & Operations Management**  
+  Sabancı University *(2014 – Present)*
+
+- **MSc in Business Analytics**  
+  University of Edinburgh *(2022 – 2023)*
+
+- **Exchange Semester**  
+  ICD Business School *(2020)*
+
+- **Bachelor of Business Administration**  
+  ADA University *(2017 – 2022)*
+
+---
+
+## Professional Interests
+
+- Quantitative trading and systematic strategy research  
+- Applied business analytics and quantitative research  
+- Data science roles requiring strong analytical rigor  
+- Research-driven teams solving real-world operational and financial problems  

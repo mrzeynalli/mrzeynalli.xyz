@@ -10,7 +10,7 @@ draft: false
 
 Blackjack, also known as 21, is a casino banking game where players compete against the dealer rather than each other. The standard version uses one or more 52-card decks, where cards 2-10 count at face value, face cards (J, Q, K) count as 10, and Aces count as either 1 or 11. The game's mathematical structure makes it particularly amenable to algorithmic analysis.
 
-![Blacjack](/images/blackjack/1.jpg)
+![Blacjack](src/assets/images/blackjack/1.jpg)
 
 ### Core Game Rules
 

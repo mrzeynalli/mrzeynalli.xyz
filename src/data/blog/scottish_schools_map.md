@@ -21,7 +21,7 @@ description: "A geospatial project using the Postcodes.io API and Folium to crea
 
 ---  
 
-![Photo by ali elliott on Unsplash](/images/scottish_state_schools_map/1.webp)  
+![Photo by ali elliott on Unsplash](src/assets/images/scottish_state_schools_map/1.webp)  
 *Photo by ali elliott on Unsplash*
 
 ## Postcodes API  
@@ -247,12 +247,12 @@ m.save(os.path.join(folder, 'scottish_schools_map.html'))
 
 Upon clicking on a school displayed on the map, an HTML-generated pop-up menu will appear, providing relevant information about the school. Furthermore, an HTML-based legend has been created to display the range of deprivation. The code will save the file as *'scottish_schools_map.html'*. A screenshot of the map is presented in **Image 1**. The radius of the circles on the map is determined by the number of pupils in each school, with larger circles representing schools with a greater number of pupils. The intensity of the blue color indicates the level of deprivation, with darker markers indicating higher levels of deprivation in the area.  
 
-![Image 1: Map of Scotland locating all schools (screenshot from the HTML-based app)](/images/scottish_state_schools_map/2.webp)  
+![Image 1: Map of Scotland locating all schools (screenshot from the HTML-based app)](src/assets/images/scottish_state_schools_map/2.webp)  
 *Image 1: Map of Scotland locating all schools (screenshot from the HTML-based app)*  
 
 The image presented below depicts the appearance of a pop-up menu upon clicking on a school icon (**Image 2**). The menu exhibits pertinent information such as the school type, local authority, zone, pupils count, and deprivation score.  
 
-![Image 2: A pop-up information menu of Leith Academy (screenshot from the HTML-based app)](/images/scottish_state_schools_map/3.webp)  
+![Image 2: A pop-up information menu of Leith Academy (screenshot from the HTML-based app)](src/assets/images/scottish_state_schools_map/3.webp)  
 *Image 2: A pop-up information menu of Leith Academy (screenshot from the HTML-based app)*  
 
 ## End  
