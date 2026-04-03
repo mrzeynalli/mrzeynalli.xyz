@@ -1,7 +1,7 @@
 ---
 author: Elvin Zeynalli
 pubDatetime: 2026-04-03T12:00:00+03:00
-title: "Deep Reinfocrement Learning for Hedging"
+title: "Deep Reinforcement Learning for Hedging"
 postSlug: deep-reinforcement-learning-hedging
 featured: false
 draft: false
