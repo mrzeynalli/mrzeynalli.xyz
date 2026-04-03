@@ -1,7 +1,7 @@
 ---
 author: Elvin Zeynalli
 pubDatetime: 2025-11-13T12:00:00Z
-title: "The Application of Hidden Markov Moodel to Detect BTC Market Regime"
+title: "The Application of Hidden Markov Model to Detect BTC Market Regime"
 postSlug: hmm-btc-market-regime
 featured: false
 draft: false
