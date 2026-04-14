@@ -71,7 +71,7 @@ html[data-theme="dark"] {
 }
 
 @utility max-w-app {
-  @apply max-w-3xl;
+  @apply max-w-4xl;
 }
 
 @utility app-layout {
@@ -80,6 +80,11 @@ html[data-theme="dark"] {
 
 .active-nav {
   @apply underline decoration-wavy decoration-2 underline-offset-8;
+}
+
+/* KaTeX dark mode: force equation text to match foreground */
+html[data-theme="dark"] .katex {
+  color: var(--foreground);
 }
 
 /* Source: https://piccalil.li/blog/a-more-modern-css-reset/ */

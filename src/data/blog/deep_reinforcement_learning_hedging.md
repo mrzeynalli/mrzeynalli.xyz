@@ -64,7 +64,7 @@ This formula is important because it shows that the problem is not just about tr
 
 One of the most important ideas in the paper is the use of a **convex risk measure**.
 
-Instead of optimizing only expected profit, the trader evaluates the terminal outcome through a risk function \( \rho(\cdot) \). Intuitively, a convex risk measure has three desirable properties:
+Instead of optimizing only expected profit, the trader evaluates the terminal outcome through a risk function $\rho(\cdot)$. Intuitively, a convex risk measure has three desirable properties:
 
 - if one payoff is always better than another, it should be considered less risky,
 - adding cash should reduce risk in a transparent way,
@@ -82,7 +82,7 @@ $$
 
 This looks technical, but the idea is simple. The question is:
 
-**How much cash buffer \( w \) would be needed so that the remaining risky payoff becomes acceptable under a chosen loss function \( \ell \)?**
+**How much cash buffer $w$ would be needed so that the remaining risky payoff becomes acceptable under a chosen loss function $\ell$?**
 
 That is why the term *certainty equivalent* is useful. It converts an uncertain payoff into a cash-like risk-adjusted quantity.
 
@@ -118,7 +118,7 @@ $$
 
 In plain language, this means:
 
-- the agent looks at the information available up to time \( k \),
+- the agent looks at the information available up to time $k$,
 - it also remembers its previous holdings,
 - and then decides the next hedge position.
 

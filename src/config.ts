@@ -2,7 +2,7 @@ export const SITE = {
   website: "https://mrzeynalli.xyz/",
   author: "Elvin Zeynalli",
   profile: "https://mrzeynalli.xyz/",
-  desc: "Business Analyst / Quantitative Researcher / Automation",
+  desc: "Business Analyst / Quantitative Researcher / Automation Engineer",
   title: "Elvin Zeynalli",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
