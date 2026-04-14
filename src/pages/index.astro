@@ -58,7 +58,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       </div>
 
       <p>
-        Business Analyst · Quantitative Researcher · Data Scientist
+        Business Analyst · Quantitative Researcher · Automation
       </p>
 
       {
@@ -74,7 +74,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 </section>
 
 
-    <!-- {
+    {
       featuredPosts.length > 0 && (
         <section
           id="featured"
@@ -83,7 +83,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
             { "border-b border-border": recentPosts.length > 0 },
           ]}
         >
-          <h2 class="text-2xl font-semibold tracking-wide"></h2>
+          <h2 class="text-2xl font-semibold tracking-wide">Selected Work</h2>
           <ul>
             {featuredPosts.map(data => (
               <Card variant="h3" {...data} />
@@ -91,7 +91,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
           </ul>
         </section>
       )
-    } -->
+    }
 
     {
       recentPosts.length > 0 && (

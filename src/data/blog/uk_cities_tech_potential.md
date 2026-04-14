@@ -12,6 +12,7 @@ tags:
   - Companies House
   - API Development
   - Web Scraping
+category: Analytics
 description: "A data-driven analysis of Companies House records to identify emerging UK tech hubs outside of London. This project uses custom API scraping and SIC code filtering to rank cities by tech firm density and growth."
 ---
 

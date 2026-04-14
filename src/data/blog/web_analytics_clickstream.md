@@ -11,6 +11,7 @@ tags:
   - Data Visualization
   - Social Media Analytics
   - Python
+category: Analytics
 description: "A comprehensive analysis of 160,000 visitor clickstreams using Python. This project evaluates marketing campaign performance by calculating conversion, drop-out, and bounce rates across different traffic sources and platforms."
 ---
 

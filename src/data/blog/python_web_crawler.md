@@ -9,6 +9,7 @@ tags:
   - Web Analytics
   - Web Crawling
   - Python
+category: Automation
 description: "A comprehensive guide to building a functional web crawler in exactly 100 lines of Python code, covering URL success handling, depth thresholds, and data storage."
 ---
 

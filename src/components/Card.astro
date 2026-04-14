@@ -10,7 +10,7 @@ type Props = {
 
 const { variant: Heading = "h2", id, data, filePath } = Astro.props;
 
-const { title, description, ...props } = data;
+const { title, description, category, ...props } = data;
 ---
 
 <li class="my-6">
@@ -28,6 +28,15 @@ const { title, description, ...props } = data;
       {title}
     </Heading>
   </a>
-  <Datetime {...props} />
+  <div class="flex items-center gap-3 flex-wrap">
+    <Datetime {...props} />
+    {
+      category && (
+        <span class="rounded-sm border border-accent/40 px-2 py-0.5 text-xs font-medium text-accent/80">
+          {category}
+        </span>
+      )
+    }
+  </div>
   <p>{description}</p>
 </li>

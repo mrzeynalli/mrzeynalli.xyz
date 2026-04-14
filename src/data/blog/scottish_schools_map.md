@@ -9,6 +9,7 @@ tags:
   - Map Building
   - Python
   - Data Visualization
+category: Analytics
 description: "A geospatial project using the Postcodes.io API and Folium to create an interactive map of Scottish schools, visualizing the relationship between pupil density and local deprivation levels."
 ---
 

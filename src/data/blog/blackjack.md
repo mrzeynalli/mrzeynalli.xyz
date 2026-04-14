@@ -2,6 +2,7 @@
 title: "Optimal Blackjack Strategy Through Dynamic Programming"
 pubDatetime: 2025-08-04T19:13:00Z
 tags: ["Dynamic Programming", "Algorithms", "Blackjack", "Python"]
+category: Automation
 description: "An analysis of optimal Blackjack strategies using recursive decomposition and dealer probability analysis."
 draft: false
 ---

@@ -11,6 +11,7 @@ tags:
   - Data Visualization
   - Python
   - NLTK
+category: Analytics
 description: "An A-grade University of Edinburgh project utilizing Python and NLTK to analyze one exabyte of evidence from South Africa's Zondo Commission, identifying the most frequently mentioned publicly traded companies."
 ---
 

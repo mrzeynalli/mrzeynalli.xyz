@@ -87,3 +87,7 @@ In parallel with my academic work, I am an active **quantitative trader**, apply
 - Applied business analytics and quantitative research  
 - Data science roles requiring strong analytical rigor  
 - Research-driven teams solving real-world operational and financial problems  
+
+---
+
+[View my work →](/posts)

@@ -13,6 +13,7 @@ tags:
   - Data Analytics
   - Data Science
   - Artificial Intelligence
+category: Analytics
 description: "A data-driven analysis of 2,431 Scottish state schools using K-Means clustering to categorize local authorities by pupil density and SIMD deprivation scores to identify areas requiring NGO support."
 ---
 

@@ -12,6 +12,7 @@ tags:
   - Dynamic Pricing
   - Combinatorial Optimization
   - Python
+category: Quant Research
 description: "A technical implementation of the Actor-Critic algorithm to solve dynamic pricing. This project benchmarks RL against theoretical optima to test its effectiveness in combinatorial optimization."
 ---
 

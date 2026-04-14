@@ -11,6 +11,7 @@ tags:
   - Risk Management
   - Reinforcement Learning
   - Deep Learning
+category: Quant Research
 description: "An overview of deep hedging, focusing on how hedging can be framed as a risk-aware sequential decision problem under transaction costs, liquidity constraints, and convex risk measures."
 ---
 
@@ -44,7 +45,7 @@ Deep hedging begins where classical hedging becomes less realistic. Instead of a
 
 ## The Core Setup
 
-The paper models a trader who must hedge a liability \( Z \) using a set of tradable hedging instruments. The final portfolio value is written as
+The paper models a trader who must hedge a liability $Z$ using a set of tradable hedging instruments. The final portfolio value is written as
 
 $$
 PL_T = -Z + p_0 + (\delta \cdot S)_T - C_T(\delta)
@@ -52,10 +53,10 @@ $$
 
 where:
 
-- \( Z \) is the payoff that needs to be hedged,
-- \( p_0 \) is the initial premium or cash injection,
-- \( (\delta \cdot S)_T \) is the cumulative trading gain or loss,
-- \( C_T(\delta) \) is the total trading cost of the strategy.
+- $Z$ is the payoff that needs to be hedged,
+- $p_0$ is the initial premium or cash injection,
+- $(\delta \cdot S)_T$ is the cumulative trading gain or loss,
+- $C_T(\delta)$ is the total trading cost of the strategy.
 
 This formula is important because it shows that the problem is not just about tracking a payoff. It is about trading a hedge over time, while paying for each adjustment. That is much closer to how hedging works in practice.
 
@@ -99,7 +100,7 @@ $$
 \rho(X) = \frac{1}{\lambda}\log \mathbb{E}\left[e^{-\lambda X}\right]
 $$
 
-where \( \lambda \) reflects risk aversion.
+where $\lambda$ reflects risk aversion.
 
 Conceptually, this means the trader is not valuing a payoff in a risk-neutral way. Instead, the trader prices it according to how it affects utility after hedging. This leads to the idea of an **indifference price**: the price at which the trader is equally satisfied with selling and hedging the claim, or not entering the trade at all.
 
@@ -148,7 +149,7 @@ This is effectively an **MDP** in finance notation.
 
 Here is the mapping more explicitly:
 
-- **State:** the information available at time \( k \), such as prices, volatility-related variables, signals, and current inventory.
+- **State:** the information available at time $k$, such as prices, volatility-related variables, signals, and current inventory.
 - **Action:** the new hedge decision, meaning how many units of each hedging instrument to hold.
 - **Transition:** the market evolves to the next time step according to the scenario generator, and the inventory updates according to the chosen action.
 - **Reward:** the portfolio's change in value, including trading gains, losses, and costs.

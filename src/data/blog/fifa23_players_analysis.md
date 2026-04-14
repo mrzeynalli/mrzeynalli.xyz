@@ -13,6 +13,7 @@ tags:
   - K-Means Clustering
   - Data Analytics
   - Python
+category: Analytics
 description: "An independent project using Python and k-Means clustering to classify over 10,000 FIFA 23 players into distinct performance segments based on Kaggle data."
 ---
 
