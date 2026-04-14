@@ -37,7 +37,7 @@ const personSchema = {
 };
 ---
 
-<BaseLayout title={`About | ${SITE.title}`} sideBarActiveItemID="about">
+<BaseLayout title={`Resume | ${SITE.title}`} sideBarActiveItemID="about">
   <script
     slot="head"
     type="application/ld+json"
@@ -47,12 +47,12 @@ const personSchema = {
   <!-- Profile -->
   <section class="mb-10">
     <h1 class="text-3xl font-bold mb-4">About Me</h1>
-    <p class="text-base-content/80 leading-relaxed max-w-2xl">
-      PhD candidate in Business Analytics & Operations Management with a strong foundation in
-      data-driven decision-making, quantitative research, and financial analysis. My work spans
-      applied machine learning, optimization, and the application of reinforcement learning to
-      trading execution and portfolio optimization. I combine academic rigor with hands-on
-      experience in analytics, automation, and financial markets.
+    <p class="text-base-content/80 leading-relaxed max-w-2xl text-justify">
+      I'm a PhD candidate at Sabanci University exploring how machine learning and reinforcement
+      learning can improve trading execution and portfolio optimization. With a background in
+      analytics, finance, and automation, I enjoy turning complex data into practical solutions
+      &mdash; whether building predictive models, automating workflows, or researching
+      quantitative strategies.
     </p>
   </section>
 
@@ -68,13 +68,17 @@ const personSchema = {
         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
           <div>
             <h3 class="font-bold text-lg">PhD &mdash; Business Analytics & Operations Management</h3>
-            <p class="text-sm text-base-content/60">Sabanci University, Istanbul</p>
+            <p class="text-sm text-base-content/60">Sabanci University</p>
           </div>
-          <span class="text-sm text-base-content/50 whitespace-nowrap">Feb 2024 &mdash; Present</span>
+          <div class="sm:text-right shrink-0">
+            <p class="text-sm text-base-content/50">Feb 2024 &mdash; Present</p>
+            <p class="text-sm text-base-content/50">Istanbul, Turkey</p>
+          </div>
         </div>
         <p class="text-sm mt-2 text-base-content/70">GPA: 3.58 / 4.00</p>
         <p class="text-xs mt-1 text-primary/70">Full Scholarship &mdash; Sabanci University Dean's Office</p>
-        <p class="text-sm text-base-content/60 mt-2">
+        <p class="text-xs font-semibold uppercase tracking-wider text-base-content/40 mt-3 mb-1">Coursework</p>
+        <p class="text-sm text-base-content/60 text-justify">
           Operations & Decision Analytics &middot; Data Mining &middot;
           Methods of Statistical Inference &middot; Probability & Statistics &middot;
           Stochastic Processes &middot; Dynamic Programming &middot;
@@ -93,11 +97,15 @@ const personSchema = {
             <h3 class="font-bold text-lg">MSc &mdash; Business Analytics</h3>
             <p class="text-sm text-base-content/60">University of Edinburgh</p>
           </div>
-          <span class="text-sm text-base-content/50 whitespace-nowrap">Sept 2022 &mdash; Sept 2023</span>
+          <div class="sm:text-right shrink-0">
+            <p class="text-sm text-base-content/50">Sept 2022 &mdash; Sept 2023</p>
+            <p class="text-sm text-base-content/50">Edinburgh, Scotland, UK</p>
+          </div>
         </div>
         <p class="text-sm mt-2 text-base-content/70">Classification: Merit</p>
         <p class="text-xs mt-1 text-primary/70">Full State Scholarship &mdash; Ministry of Science & Education, Republic of Azerbaijan</p>
-        <p class="text-sm text-base-content/60 mt-2">
+        <p class="text-xs font-semibold uppercase tracking-wider text-base-content/40 mt-3 mb-1">Coursework</p>
+        <p class="text-sm text-base-content/60 text-justify">
           Predictive Analytics &middot; Prescriptive Analytics &middot;
           Stochastic Optimization &middot; Simulation Modelling &middot;
           Principles of Data Analytics &middot; Python Programming &middot;
@@ -113,12 +121,16 @@ const personSchema = {
         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
           <div>
             <h3 class="font-bold text-lg">Exchange Semester</h3>
-            <p class="text-sm text-base-content/60">ICD Business School, Paris</p>
+            <p class="text-sm text-base-content/60">ICD Business School</p>
           </div>
-          <span class="text-sm text-base-content/50 whitespace-nowrap">Jan 2020 &mdash; May 2020</span>
+          <div class="sm:text-right shrink-0">
+            <p class="text-sm text-base-content/50">Jan 2020 &mdash; May 2020</p>
+            <p class="text-sm text-base-content/50">Paris, France</p>
+          </div>
         </div>
         <p class="text-xs mt-2 text-primary/70">Erasmus+ Scholarship</p>
-        <p class="text-sm text-base-content/60 mt-2">
+        <p class="text-xs font-semibold uppercase tracking-wider text-base-content/40 mt-3 mb-1">Coursework</p>
+        <p class="text-sm text-base-content/60 text-justify">
           International Finance &middot; Management of Complex Sales &middot;
           Negotiation Strategies &middot; Digital Marketing &middot;
           Business Plan &middot; Hackathon
@@ -131,12 +143,16 @@ const personSchema = {
         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
           <div>
             <h3 class="font-bold text-lg">BBA &mdash; Business Administration</h3>
-            <p class="text-sm text-base-content/60">ADA University, Baku</p>
+            <p class="text-sm text-base-content/60">ADA University</p>
           </div>
-          <span class="text-sm text-base-content/50 whitespace-nowrap">Sept 2017 &mdash; Jun 2022</span>
+          <div class="sm:text-right shrink-0">
+            <p class="text-sm text-base-content/50">Sept 2017 &mdash; Jun 2022</p>
+            <p class="text-sm text-base-content/50">Baku, Azerbaijan</p>
+          </div>
         </div>
         <p class="text-sm mt-2 text-base-content/70">GPA: 3.52 / 4.00</p>
-        <p class="text-sm text-base-content/60 mt-2">
+        <p class="text-xs font-semibold uppercase tracking-wider text-base-content/40 mt-3 mb-1">Coursework</p>
+        <p class="text-sm text-base-content/60 text-justify">
           Business Analytics &middot; Business Statistics I & II &middot;
           Operations Management &middot; Corporate Finance &middot;
           Financial Investments &middot; Principles of Finance &middot;
@@ -162,12 +178,16 @@ const personSchema = {
         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
           <div>
             <h3 class="font-bold text-lg">Teaching Assistant</h3>
-            <p class="text-sm text-base-content/60">Sabanci University, Istanbul</p>
+            <p class="text-sm text-base-content/60">Sabanci University</p>
           </div>
-          <span class="text-sm text-base-content/50 whitespace-nowrap">Feb 2024 &mdash; Present</span>
+          <div class="sm:text-right shrink-0">
+            <p class="text-sm text-base-content/50">Feb 2024 &mdash; Present</p>
+            <p class="text-sm text-base-content/50">Istanbul, Turkey</p>
+          </div>
         </div>
-        <ul class="mt-2 space-y-1 text-sm text-base-content/75">
+        <ul class="mt-2 space-y-1 text-sm text-base-content/75 text-justify">
           <li>TA for Introduction to Data Analysis (MGMT 203), Introduction to Management (MGMT 201), International Business (MGMT 403), and Decision Making Under Uncertainty (OPIM 410)</li>
+          <li>Provided recitation classes, graded exams, delivered feedback, and guided student course projects</li>
         </ul>
       </div>
 
@@ -177,12 +197,35 @@ const personSchema = {
         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
           <div>
             <h3 class="font-bold text-lg">Business Development Assistant</h3>
-            <p class="text-sm text-base-content/60">Chamberlain McBain, Edinburgh</p>
+            <p class="text-sm text-base-content/60">Chamberlain McBain</p>
           </div>
-          <span class="text-sm text-base-content/50 whitespace-nowrap">Jun 2023 &mdash; Dec 2023</span>
+          <div class="sm:text-right shrink-0">
+            <p class="text-sm text-base-content/50">Jun 2023 &mdash; Dec 2023</p>
+            <p class="text-sm text-base-content/50">Edinburgh, Scotland, UK</p>
+          </div>
         </div>
-        <ul class="mt-2 space-y-1 text-sm text-base-content/75">
+        <ul class="mt-2 space-y-1 text-sm text-base-content/75 text-justify">
+          <li>Scraped 4,000+ commercial property listings across Scotland and cross-matched them with 260,000+ valuation rolls from Scottish Assessors; built an interactive Tableau dashboard mapping property trends</li>
+          <li>Automated weekly scraping of 1,000+ court rolls; enriched records with Companies House API data to analyse pursuer/defender participation and industry representation</li>
           <li>Built a Python pipeline (web scraping &rarr; demand modelling &rarr; automated visualisation &rarr; LinkedIn outreach) that replaced two days of manual weekly work</li>
+        </ul>
+      </div>
+
+      <!-- Ipsos MORI -->
+      <div class="relative pl-6 border-l-2 border-primary/30">
+        <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-base-300"></div>
+        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
+          <div>
+            <h3 class="font-bold text-lg">Data Validation Associate</h3>
+            <p class="text-sm text-base-content/60">Ipsos MORI</p>
+          </div>
+          <div class="sm:text-right shrink-0">
+            <p class="text-sm text-base-content/50">Jan 2023 &mdash; Jun 2023</p>
+            <p class="text-sm text-base-content/50">Edinburgh, Scotland, UK</p>
+          </div>
+        </div>
+        <ul class="mt-2 space-y-1 text-sm text-base-content/75 text-justify">
+          <li>Validated data gathered from telephone interviews, surveys, and venue visits; cross-referenced inputs to ensure 100% accuracy and compliance with company standards</li>
         </ul>
       </div>
 
@@ -192,12 +235,33 @@ const personSchema = {
         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
           <div>
             <h3 class="font-bold text-lg">Junior Financial Analyst</h3>
-            <p class="text-sm text-base-content/60">FINADCO, Baku</p>
+            <p class="text-sm text-base-content/60">FINADCO</p>
           </div>
-          <span class="text-sm text-base-content/50 whitespace-nowrap">Feb 2022 &mdash; Sept 2022</span>
+          <div class="sm:text-right shrink-0">
+            <p class="text-sm text-base-content/50">Feb 2022 &mdash; Sept 2022</p>
+            <p class="text-sm text-base-content/50">Baku, Azerbaijan</p>
+          </div>
         </div>
-        <ul class="mt-2 space-y-1 text-sm text-base-content/75">
+        <ul class="mt-2 space-y-1 text-sm text-base-content/75 text-justify">
           <li>DCF and feasibility analyses for large investment projects; valued five government-owned assets exceeding USD 4M; authored bond market research</li>
+        </ul>
+      </div>
+
+      <!-- ADA University TA -->
+      <div class="relative pl-6 border-l-2 border-primary/30">
+        <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-base-300"></div>
+        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
+          <div>
+            <h3 class="font-bold text-lg">Teaching Assistant</h3>
+            <p class="text-sm text-base-content/60">ADA University</p>
+          </div>
+          <div class="sm:text-right shrink-0">
+            <p class="text-sm text-base-content/50">Oct 2021 &mdash; Jan 2022</p>
+            <p class="text-sm text-base-content/50">Baku, Azerbaijan</p>
+          </div>
+        </div>
+        <ul class="mt-2 space-y-1 text-sm text-base-content/75 text-justify">
+          <li>TA for Business Statistics; organized classes, graded exams, and provided feedback to students</li>
         </ul>
       </div>
 
@@ -207,11 +271,14 @@ const personSchema = {
         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
           <div>
             <h3 class="font-bold text-lg">Communications Assistant</h3>
-            <p class="text-sm text-base-content/60">Azerbaijan Micro-Finance Association, Baku</p>
+            <p class="text-sm text-base-content/60">Azerbaijan Micro-Finance Association</p>
           </div>
-          <span class="text-sm text-base-content/50 whitespace-nowrap">Jan 2021 &mdash; Dec 2021</span>
+          <div class="sm:text-right shrink-0">
+            <p class="text-sm text-base-content/50">Jan 2021 &mdash; Dec 2021</p>
+            <p class="text-sm text-base-content/50">Baku, Azerbaijan</p>
+          </div>
         </div>
-        <ul class="mt-2 space-y-1 text-sm text-base-content/75">
+        <ul class="mt-2 space-y-1 text-sm text-base-content/75 text-justify">
           <li>Built interactive CSR dashboards presented to board members of commercial banks and financial institutions</li>
         </ul>
       </div>
@@ -265,6 +332,31 @@ const personSchema = {
 
   <div class="divider"></div>
 
+  <!-- Test Scores -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-bold mb-6">Test Scores</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div class="p-4 rounded-lg bg-base-200/50 text-center">
+        <p class="text-2xl font-bold">650</p>
+        <p class="text-sm font-medium text-base-content/70">GMAT</p>
+        <p class="text-xs text-base-content/50 mt-1">Quant: 49 / 51</p>
+        <p class="text-xs text-base-content/40">Dec 2021</p>
+      </div>
+      <div class="p-4 rounded-lg bg-base-200/50 text-center">
+        <p class="text-2xl font-bold">110</p>
+        <p class="text-sm font-medium text-base-content/70">TOEFL iBT</p>
+        <p class="text-xs text-base-content/40 mt-1">Jan 2024</p>
+      </div>
+      <div class="p-4 rounded-lg bg-base-200/50 text-center">
+        <p class="text-2xl font-bold">8.0</p>
+        <p class="text-sm font-medium text-base-content/70">IELTS</p>
+        <p class="text-xs text-base-content/40 mt-1">Jun 2022</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
   <!-- Languages -->
   <section class="mb-10">
     <h2 class="text-2xl font-bold mb-6">Languages</h2>
@@ -296,6 +388,14 @@ const personSchema = {
       <span class="badge badge-lg badge-ghost">Trading</span>
       <span class="badge badge-lg badge-ghost">Philosophy</span>
       <span class="badge badge-lg badge-ghost">Politics</span>
+      <a
+        href="https://www.behance.net/mrzeynalli"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="badge badge-lg badge-ghost hover:badge-primary transition-colors"
+      >
+        Graphic Design &nearr;
+      </a>
     </div>
   </section>
 
