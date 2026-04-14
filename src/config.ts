@@ -1,3 +1,8 @@
+// Named exports used by Astrofy-style layouts
+export const SITE_TITLE = "Elvin Zeynalli";
+export const SITE_DESCRIPTION =
+  "Business Analyst / Quantitative Researcher / Automation Engineer";
+
 export const SITE = {
   website: "https://mrzeynalli.xyz/",
   author: "Elvin Zeynalli",

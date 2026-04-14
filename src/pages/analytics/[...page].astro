@@ -1,38 +1,38 @@
 ---
 import type { GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
-import Main from "@/layouts/Main.astro";
-import Layout from "@/layouts/Layout.astro";
-import Header from "@/components/Header.astro";
-import Footer from "@/components/Footer.astro";
-import Card from "@/components/Card.astro";
-import Pagination from "@/components/Pagination.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import HorizontalCard from "@/components/HorizontalCard.astro";
 import getSortedPosts from "@/utils/getSortedPosts";
 import { SITE } from "@/config";
 
-export const getStaticPaths = (async ({ paginate }) => {
-  const posts = await getCollection(
-    "blog",
-    ({ data }) => !data.draft && data.category === "Analytics"
-  );
-  return paginate(getSortedPosts(posts), { pageSize: SITE.postPerPage });
+export const getStaticPaths = (() => {
+  return [{ params: { page: undefined } }];
 }) satisfies GetStaticPaths;
 
-const { page } = Astro.props;
+const posts = await getCollection(
+  "blog",
+  ({ data }) => !data.draft && data.category === "Analytics"
+);
+const sortedPosts = getSortedPosts(posts);
 ---
 
-<Layout title={`Analytics | ${SITE.title}`}>
-  <Header />
-  <Main
-    pageTitle="Analytics"
-    pageDesc="Data analysis, visualization, clustering, and applied analytics projects."
-  >
-    <ul>
-      {page.data.map(data => <Card {...data} />)}
-    </ul>
-  </Main>
+<BaseLayout
+  title={`Analytics | ${SITE.title}`}
+  description="Data analysis, visualization, clustering, and applied analytics projects."
+  sideBarActiveItemID="analytics"
+>
+  <h1 class="text-3xl font-bold mb-2">Analytics</h1>
+  <p class="text-base-content/60 mb-8">
+    Data analysis, visualization, clustering, and applied analytics projects.
+  </p>
 
-  <Pagination {page} />
-
-  <Footer noMarginTop={page.lastPage > 1} />
-</Layout>
+  {
+    sortedPosts.map((post, i) => (
+      <>
+        <HorizontalCard {...post} />
+        {i < sortedPosts.length - 1 && <div class="divider my-1" />}
+      </>
+    ))
+  }
+</BaseLayout>

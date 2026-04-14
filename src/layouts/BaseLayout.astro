@@ -1,0 +1,79 @@
+---
+import SideBar from "@/components/SideBar.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import "@/styles/global.css";
+import { SITE_TITLE, SITE_DESCRIPTION } from "@/config";
+
+export interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  sideBarActiveItemID?: string;
+  ogType?: string;
+}
+
+const {
+  title = SITE_TITLE,
+  description = SITE_DESCRIPTION,
+  image = "/me.jpg",
+  sideBarActiveItemID,
+  ogType = "website",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" data-theme="lofi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.url)} />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, Astro.url)} />
+  </head>
+  <body>
+    <div class="bg-base-100 drawer lg:drawer-open">
+      <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+
+      <!-- Main content -->
+      <div class="drawer-content bg-base-100 flex flex-col min-h-screen">
+        <!-- Mobile header (hamburger) -->
+        <Header />
+
+        <!-- Page body -->
+        <div class="flex justify-center flex-1">
+          <main class="p-6 pt-10 w-full max-w-[900px]">
+            <slot />
+          </main>
+        </div>
+
+        <Footer />
+      </div>
+
+      <!-- Sidebar -->
+      <SideBar sideBarActiveItemID={sideBarActiveItemID} />
+    </div>
+
+    <!-- Theme toggle script -->
+    <script is:inline>
+      (function () {
+        const saved = localStorage.getItem("theme");
+        if (saved) document.documentElement.setAttribute("data-theme", saved);
+      })();
+    </script>
+  </body>
+</html>

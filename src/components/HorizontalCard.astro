@@ -1,0 +1,51 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getPath } from "@/utils/getPath";
+
+type Props = CollectionEntry<"blog">;
+
+const { id, data, filePath } = Astro.props;
+const { title, description, pubDatetime, category, tags } = data;
+
+const url = getPath(id, filePath);
+
+const displayDate = new Date(pubDatetime).toLocaleDateString("en-US", {
+  year: "numeric",
+  month: "short",
+  day: "numeric",
+});
+---
+
+<div class="py-4">
+  <a
+    href={url}
+    class="group block"
+  >
+    <h2
+      class="text-xl font-bold group-hover:text-primary transition-colors leading-snug"
+    >
+      {title}
+    </h2>
+  </a>
+
+  <div class="flex items-center gap-2 mt-1 flex-wrap">
+    <time class="text-sm text-base-content/50">{displayDate}</time>
+    {
+      category && (
+        <span class="badge badge-outline badge-sm">{category}</span>
+      )
+    }
+  </div>
+
+  <p class="mt-2 text-base-content/75 leading-relaxed">{description}</p>
+
+  {
+    tags && tags.length > 0 && (
+      <div class="flex flex-wrap gap-1 mt-3">
+        {tags.slice(0, 5).map(tag => (
+          <span class="badge badge-ghost badge-sm">{tag}</span>
+        ))}
+      </div>
+    )
+  }
+</div>

@@ -1,0 +1,42 @@
+---
+import SideBarMenu from "./SideBarMenu.astro";
+import SideBarFooter from "./SideBarFooter.astro";
+
+const { sideBarActiveItemID } = Astro.props;
+---
+
+<div class="drawer-side z-40">
+  <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+  <aside
+    class="bg-base-200 min-h-screen w-72 flex flex-col"
+  >
+    <!-- Profile section -->
+    <div class="px-6 pt-8 pb-4 text-center">
+      <a href="/" class="group inline-block">
+        <div class="avatar">
+          <div class="w-24 rounded-full ring ring-base-300 ring-offset-base-100 ring-offset-2 transition-all duration-200 group-hover:ring-primary">
+            <img src="/me.jpg" alt="Elvin Zeynalli" />
+          </div>
+        </div>
+      </a>
+      <div class="mt-4">
+        <h1 class="text-lg font-bold leading-tight">Elvin Zeynalli</h1>
+        <p class="text-xs text-base-content/60 mt-1 leading-relaxed">
+          Business Analyst<br />Quantitative Researcher<br />Automation Engineer
+        </p>
+      </div>
+    </div>
+
+    <div class="divider my-0 px-4"></div>
+
+    <!-- Navigation -->
+    <div class="flex-1 overflow-y-auto">
+      <SideBarMenu sideBarActiveItemID={sideBarActiveItemID} />
+    </div>
+
+    <div class="divider my-0 px-4"></div>
+
+    <!-- Social icons + theme toggle -->
+    <SideBarFooter />
+  </aside>
+</div>

@@ -1,0 +1,86 @@
+---
+const { sideBarActiveItemID } = Astro.props;
+const activeClass = "bg-base-300 font-semibold";
+
+const isActive = (id: string) => sideBarActiveItemID === id;
+---
+
+<ul class="menu menu-md px-3 py-4 gap-1">
+  <li>
+    <a
+      id="home"
+      href="/"
+      class:list={["py-3 text-base rounded-lg", { [activeClass]: isActive("home") }]}
+    >
+      Home
+    </a>
+  </li>
+
+  <li>
+    <a
+      id="projects"
+      href="/projects"
+      class:list={["py-3 text-base rounded-lg", { [activeClass]: isActive("projects") }]}
+    >
+      Projects
+    </a>
+  </li>
+
+  <!-- Sub-items under Projects -->
+  <li class="ps-4">
+    <a
+      id="analytics"
+      href="/analytics"
+      class:list={[
+        "py-2 text-sm rounded-lg text-base-content/70 hover:text-base-content",
+        { [activeClass]: isActive("analytics") },
+      ]}
+    >
+      → Analytics
+    </a>
+  </li>
+  <li class="ps-4">
+    <a
+      id="quant-research"
+      href="/quant-research"
+      class:list={[
+        "py-2 text-sm rounded-lg text-base-content/70 hover:text-base-content",
+        { [activeClass]: isActive("quant-research") },
+      ]}
+    >
+      → Quant Research
+    </a>
+  </li>
+  <li class="ps-4">
+    <a
+      id="automation"
+      href="/automation"
+      class:list={[
+        "py-2 text-sm rounded-lg text-base-content/70 hover:text-base-content",
+        { [activeClass]: isActive("automation") },
+      ]}
+    >
+      → Automation
+    </a>
+  </li>
+
+  <li>
+    <a
+      id="about"
+      href="/about"
+      class:list={["py-3 text-base rounded-lg", { [activeClass]: isActive("about") }]}
+    >
+      About
+    </a>
+  </li>
+
+  <li>
+    <a
+      id="contact"
+      href="mailto:ezeynalli@hotmail.com"
+      class="py-3 text-base rounded-lg"
+    >
+      Contact
+    </a>
+  </li>
+</ul>
