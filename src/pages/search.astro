@@ -1,21 +1,15 @@
 ---
 import "@pagefind/default-ui/css/ui.css";
-import Main from "@/layouts/Main.astro";
-import Layout from "@/layouts/Layout.astro";
-import Header from "@/components/Header.astro";
-import Footer from "@/components/Footer.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 import { SITE } from "@/config";
-
-const backUrl = SITE.showBackButton ? `${Astro.url.pathname}` : "/";
 ---
 
-<Layout title={`Search | ${SITE.title}`}>
-  <Header />
-  <Main pageTitle="Search" pageDesc="Search any article ...">
-    <div id="pagefind-search" transition:persist data-backurl={backUrl}></div>
-  </Main>
-  <Footer />
-</Layout>
+<BaseLayout title={`Search | ${SITE.title}`} sideBarActiveItemID="search">
+  <h1 class="text-3xl font-bold mb-2">Search</h1>
+  <p class="text-base-content/60 mb-8">Search any article.</p>
+
+  <div id="pagefind-search"></div>
+</BaseLayout>
 
 <script>
   function initSearch() {
@@ -32,39 +26,31 @@ const backUrl = SITE.showBackButton ? `${Astro.url.pathname}` : "/";
       // @ts-expect-error — Missing types for @pagefind/default-ui package.
       const { PagefindUI } = await import("@pagefind/default-ui");
 
-      // Display warning inn dev mode
       if (import.meta.env.DEV) {
         pageFindSearch.innerHTML = `
-            <div class="bg-muted/75 rounded p-4 space-y-4 mb-4">
-              <p><strong>DEV mode Warning! </strong>You need to build the project at least once to see the search results during development.</p>
-              <code class="block bg-black text-white px-2 py-1 rounded">npm run build</code>
-            </div>
-          `;
+          <div class="bg-base-200 rounded-lg p-4 space-y-4 mb-4">
+            <p><strong>DEV mode:</strong> Build the project at least once to see search results.</p>
+            <code class="block bg-base-300 px-2 py-1 rounded text-sm">npm run build</code>
+          </div>
+        `;
       }
 
-      // Init pagefind ui
       const search = new PagefindUI({
         element: "#pagefind-search",
         showImages: false,
         showSubResults: true,
         processTerm: function (term: string) {
-          params.set("q", term); // Update the `q` parameter in the URL
-          history.replaceState(history.state, "", "?" + params.toString()); // Push the new URL without reloading
-
-          const backUrl = pageFindSearch?.dataset?.backurl;
-          sessionStorage.setItem("backUrl", backUrl + "?" + params.toString());
-
+          params.set("q", term);
+          history.replaceState(history.state, "", "?" + params.toString());
           return term;
         },
       });
 
-      // If search param exists (eg: search?q=astro), trigger search
       const query = params.get("q");
       if (query) {
         search.triggerSearch(query);
       }
 
-      // Reset search param if search input is cleared
       const searchInput = document.querySelector(".pagefind-ui__search-input");
       const clearButton = document.querySelector(".pagefind-ui__search-clear");
       searchInput?.addEventListener("input", resetSearchParam);
@@ -80,10 +66,7 @@ const backUrl = SITE.showBackButton ? `${Astro.url.pathname}` : "/";
 
   document.addEventListener("astro:after-swap", () => {
     const pagefindSearch = document.querySelector("#pagefind-search");
-
-    // if pagefind search form already exists, don't initialize search component
     if (pagefindSearch && pagefindSearch.querySelector("form")) return;
-
     initSearch();
   });
   initSearch();
@@ -91,43 +74,12 @@ const backUrl = SITE.showBackButton ? `${Astro.url.pathname}` : "/";
 
 <style is:global>
   #pagefind-search {
-    --pagefind-ui-font: var(--font-app);
-    --pagefind-ui-text: var(--foreground);
-    --pagefind-ui-background: var(--background);
-    --pagefind-ui-border: var(--border);
-    --pagefind-ui-primary: var(--accent);
-    --pagefind-ui-tag: var(--background);
-    --pagefind-ui-border-radius: 0.375rem;
+    --pagefind-ui-font: inherit;
+    --pagefind-ui-border-radius: 0.5rem;
     --pagefind-ui-border-width: 1px;
-    --pagefind-ui-image-border-radius: 8px;
-    --pagefind-ui-image-box-ratio: 3 / 2;
-
-    form::before {
-      background-color: var(--foreground);
-    }
 
     input {
       font-weight: 400;
-      border: 1px solid var(--border);
-    }
-
-    input:focus-visible {
-      outline: 1px solid var(--accent);
-    }
-
-    .pagefind-ui__result-title a {
-      color: var(--accent);
-      outline-offset: 1px;
-      outline-color: var(--accent);
-      text-decoration-style: dashed;
-      text-underline-offset: 4px;
-    }
-
-    .pagefind-ui__result-title a:focus-visible,
-    .pagefind-ui__search-clear:focus-visible {
-      text-decoration-line: none;
-      outline-width: 2px;
-      outline-style: dashed;
     }
 
     .pagefind-ui__result:last-of-type {
@@ -137,5 +89,21 @@ const backUrl = SITE.showBackButton ? `${Astro.url.pathname}` : "/";
     .pagefind-ui__result-nested .pagefind-ui__result-link:before {
       font-family: system-ui;
     }
+  }
+
+  [data-theme="lofi"] #pagefind-search {
+    --pagefind-ui-text: #1a1a1a;
+    --pagefind-ui-background: #fff;
+    --pagefind-ui-border: #d4d4d4;
+    --pagefind-ui-primary: #1a1a1a;
+    --pagefind-ui-tag: #f5f5f5;
+  }
+
+  [data-theme="dark"] #pagefind-search {
+    --pagefind-ui-text: #e5e5e5;
+    --pagefind-ui-background: #1a1a2e;
+    --pagefind-ui-border: #3a3a4a;
+    --pagefind-ui-primary: #e5e5e5;
+    --pagefind-ui-tag: #2a2a3a;
   }
 </style>
