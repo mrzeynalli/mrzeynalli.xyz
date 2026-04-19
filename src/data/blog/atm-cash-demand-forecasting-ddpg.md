@@ -36,6 +36,9 @@ This project asks a simple but ambitious question: can a **self-learning agent**
 
 There is a counterintuitive fact at the heart of this project. Despite the rise of mobile payments and contactless cards, demand for physical cash has not gone away. Economists call this the **"cash paradox"** — people continue to withdraw cash even as digital alternatives become more convenient. That keeps the forecasting problem commercially alive.
 
+![Cash Paradox](/images/atm/cash_paradox.png)
+*Despite the proliferation of digital payment alternatives, aggregate cash in circulation has continued to grow — the so-called "cash paradox."*
+
 What makes ATM cash demand particularly difficult is its layered structure. A few patterns are predictable: withdrawals tend to spike on Fridays, drop on Tuesdays, and surge around paydays. But beneath those regularities lies a great deal of noise. An ATM near a university behaves very differently from one outside a supermarket. Local events, economic shocks, or a nearby competitor closing can shift demand sharply and without warning.
 
 Traditional forecasting models — ARIMA, regression, and even modern neural networks like LSTM — share a structural weakness: they are trained once on historical data and then frozen. Once deployed, they cannot adapt. If the world changes around them, their predictions get worse and worse until someone manually retrains them. In machine learning, this problem has a name: **concept drift**.
@@ -74,6 +77,9 @@ The translation is direct:
 | **Action** | The forecasted demand for tomorrow |
 | **Reward** | A score reflecting how close the forecast was to actual demand |
 | **Policy** | The agent's learned rule for going from observations to a forecast |
+
+![Markov Decision Process](/images/atm/markov_decision_process.png)
+*The MDP formulation: the agent observes a state (14-day demand history + day of week), outputs a forecast as its action, receives a reward signal based on accuracy, and transitions to a new state.*
 
 One important detail: the action (a cash demand forecast) is a continuous number, not a choice from a menu. This rules out many standard RL algorithms, which assume discrete actions like "buy" or "sell." It is why this project uses **DDPG**, an algorithm specifically built for continuous action spaces.
 
@@ -170,6 +176,9 @@ Against state-of-the-art ensemble and clustering-based methods, the agent fell s
 | **DDPG (this study)** | **24.64%** |
 | ARIMA (Standard) | 25.91% |
 | Polynomial Regression | 29.73% |
+
+![ATM Results](/images/atm/atm_results.png)
+*Per-ATM SMAPE distribution across the 111-ATM NN5 dataset. The DDPG agent performs strongly on stable, seasonal machines (e.g. ATM 22: 12.72%) but struggles on volatile, irregular ones (e.g. ATM 37: 45.79%).*
 
 The worst case was ATM 37, with a SMAPE of **45.79%**. This ATM exhibited irregular, high-magnitude demand spikes without a consistent seasonal structure. Faced with unpredictable patterns, the agent retreated to a conservative policy — essentially making cautious, middle-of-the-road forecasts — which consistently underestimated extreme demand events.
 

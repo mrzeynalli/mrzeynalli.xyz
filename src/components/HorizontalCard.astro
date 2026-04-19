@@ -4,8 +4,11 @@ import { getPath } from "@/utils/getPath";
 
 type Props = CollectionEntry<"blog">;
 
-const { id, data, filePath } = Astro.props;
+const { id, data, filePath, body } = Astro.props;
 const { title, description, pubDatetime, category, tags } = data;
+
+const wordCount = body?.trim().split(/\s+/).length ?? 0;
+const readingTime = Math.max(1, Math.ceil(wordCount / 200));
 
 const url = getPath(id, filePath);
 
@@ -30,6 +33,7 @@ const displayDate = new Date(pubDatetime).toLocaleDateString("en-US", {
 
   <div class="flex items-center gap-2 mt-1 flex-wrap">
     <time class="text-sm text-base-content/50">{displayDate}</time>
+    <span class="text-sm text-base-content/40">{readingTime} min read</span>
     {
       category && (
         <span class="badge badge-outline badge-sm">{category}</span>

@@ -1,12 +1,8 @@
 ---
 import { getCollection } from "astro:content";
 import type { GetStaticPathsOptions } from "astro";
-import Main from "@/layouts/Main.astro";
-import Layout from "@/layouts/Layout.astro";
-import Header from "@/components/Header.astro";
-import Footer from "@/components/Footer.astro";
-import Card from "@/components/Card.astro";
-import Pagination from "@/components/Pagination.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import HorizontalCard from "@/components/HorizontalCard.astro";
 import getUniqueTags from "@/utils/getUniqueTags";
 import getPostsByTag from "@/utils/getPostsByTag";
 import { SITE } from "@/config";
@@ -17,7 +13,6 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
 
   return tags.flatMap(({ tag, tagName }) => {
     const tagPosts = getPostsByTag(posts, tag);
-
     return paginate(tagPosts, {
       params: { tag },
       props: { tagName },
@@ -26,25 +21,26 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   });
 }
 
-const params = Astro.params;
-const { tag } = params;
+const { tag } = Astro.params;
 const { page, tagName } = Astro.props;
 ---
 
-<Layout title={`Tag: ${tagName} | ${SITE.title}`}>
-  <Header />
-  <Main
-    pageTitle={[`Tag:`, `${tagName}`]}
-    titleTransition={tag}
-    pageDesc={`All the articles with the tag "${tagName}".`}
-  >
-    <h1 slot="title" transition:name={tag}>{`Tag:${tag}`}</h1>
-    <ul>
-      {page.data.map(data => <Card {...data} />)}
-    </ul>
-  </Main>
+<BaseLayout title={`Tag: ${tagName} | ${SITE.title}`} sideBarActiveItemID="tags">
+  <section class="mb-6">
+    <a href="/tags" class="text-sm text-base-content/50 hover:text-primary transition-colors">← All Tags</a>
+    <h1 class="text-3xl font-bold mt-2"># {tagName}</h1>
+    <p class="text-base-content/50 text-sm mt-1">{page.total} post{page.total !== 1 ? "s" : ""}</p>
+  </section>
 
-  <Pagination {page} />
+  <div class="divide-y divide-base-200">
+    {page.data.map(post => <HorizontalCard {...post} />)}
+  </div>
 
-  <Footer noMarginTop={page.lastPage > 1} />
-</Layout>
+  {page.lastPage > 1 && (
+    <div class="flex justify-center items-center gap-2 mt-8">
+      {page.url.prev && <a href={page.url.prev} class="btn btn-sm btn-ghost">← Prev</a>}
+      <span class="text-sm text-base-content/50">{page.currentPage} / {page.lastPage}</span>
+      {page.url.next && <a href={page.url.next} class="btn btn-sm btn-ghost">Next →</a>}
+    </div>
+  )}
+</BaseLayout>
