@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import SideBarMenu from "./SideBarMenu.astro";
 import SideBarFooter from "./SideBarFooter.astro";
 
@@ -6,7 +7,9 @@ const { sideBarActiveItemID } = Astro.props;
 ---
 
 <div class="drawer-side z-40">
-  <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+  <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay">
+    <span class="sr-only">Close sidebar</span>
+  </label>
   <aside
     class="bg-base-200 min-h-screen w-72 flex flex-col"
     transition:animate="none"
@@ -52,7 +55,7 @@ const { sideBarActiveItemID } = Astro.props;
       <a href="/" class="group inline-block">
         <div class="avatar">
           <div class="w-24 rounded-full ring ring-base-300 ring-offset-base-100 ring-offset-2 transition-all duration-200 group-hover:ring-primary">
-            <img src="/me.jpg" alt="Elvin Zeynalli" transition:persist="avatar" />
+            <Image src="/me.jpg" alt="Elvin Zeynalli" width={96} height={96} transition:persist="avatar" />
           </div>
         </div>
       </a>

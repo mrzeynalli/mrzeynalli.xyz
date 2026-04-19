@@ -4,11 +4,11 @@ const activeClass = "bg-base-300 font-semibold";
 
 const isActive = (id: string) => sideBarActiveItemID === id;
 
-const base = "block w-full py-3 px-4 text-base hover:bg-base-300/50 transition-colors";
-const sub  = "block w-full py-2 px-4 ps-10 text-sm text-base-content/70 hover:text-base-content hover:bg-base-300/50 transition-colors";
+const base = "block w-full py-3 px-3 text-base rounded-md hover:bg-base-300/50 transition-colors";
+const sub  = "block w-full py-2 px-3 ps-8 text-sm text-base-content/70 hover:text-base-content hover:bg-base-300/50 rounded-md transition-colors";
 ---
 
-<ul class="flex flex-col py-4 gap-0.5 w-full">
+<ul class="flex flex-col py-4 gap-0.5 w-full px-4">
   <li class="w-full">
     <a id="home" href="/" class:list={[base, { [activeClass]: isActive("home") }]}>
       Home
@@ -38,6 +38,12 @@ const sub  = "block w-full py-2 px-4 ps-10 text-sm text-base-content/70 hover:te
   </li>
 
   <li class="w-full">
+    <a id="tags" href="/tags" class:list={[base, { [activeClass]: isActive("tags") }]}>
+      Tags
+    </a>
+  </li>
+
+  <li class="w-full">
     <a id="about" href="/about" class:list={[base, { [activeClass]: isActive("about") }]}>
       Resume
     </a>
@@ -50,16 +56,10 @@ const sub  = "block w-full py-2 px-4 ps-10 text-sm text-base-content/70 hover:te
   </li>
 
   <li class="w-full">
-    <a id="tags" href="/tags" class:list={[base, { [activeClass]: isActive("tags") }]}>
-      Tags
-    </a>
-  </li>
-
-  <li class="w-full">
     <a
       id="archives"
       href="/archives"
-      class:list={["flex w-full items-center gap-2 py-3 px-4 text-base hover:bg-base-300/50 transition-colors", { [activeClass]: isActive("archives") }]}
+      class:list={["flex w-full items-center gap-2 py-3 px-3 text-base rounded-md hover:bg-base-300/50 transition-colors", { [activeClass]: isActive("archives") }]}
     >
       <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
