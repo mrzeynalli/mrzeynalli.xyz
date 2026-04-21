@@ -18,7 +18,7 @@ const { sideBarActiveItemID } = Astro.props;
     <div class="px-6 pt-8 pb-4 text-center relative">
       <!-- Theme toggle -->
       <button
-        id="theme-toggle"
+        id="theme-btn"
         class="absolute top-4 left-4 btn btn-ghost btn-xs btn-circle text-base-content/40 hover:text-base-content"
         aria-label="Toggle theme"
         title="Toggle light / dark"
@@ -55,7 +55,7 @@ const { sideBarActiveItemID } = Astro.props;
       <a href="/" class="group inline-block">
         <div class="avatar">
           <div class="w-24 rounded-full ring ring-base-300 ring-offset-base-100 ring-offset-2 transition-all duration-200 group-hover:ring-primary">
-            <Image src="/me.jpg" alt="Elvin Zeynalli" width={96} height={96} transition:persist="avatar" />
+            <Image src="/me.jpg" alt="Elvin Zeynalli" width={96} height={96} loading="eager" fetchpriority="high" transition:persist="avatar" />
           </div>
         </div>
       </a>

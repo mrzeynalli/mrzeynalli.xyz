@@ -1,6 +1,6 @@
 // Constants
 const THEME = "theme";
-const LIGHT = "light";
+const LIGHT = "lofi";
 const DARK = "dark";
 
 // Initial color scheme
@@ -16,13 +16,11 @@ function getPreferTheme(): string {
   if (initialColorScheme) return initialColorScheme;
 
   // return user device's prefer color scheme (system fallback)
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? DARK
-    : LIGHT;
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? DARK : LIGHT;
 }
 
-// Use existing theme value from inline script if available, otherwise detect
-let themeValue = window.theme?.themeValue ?? getPreferTheme();
+// Use value set by anti-FOUC inline script if available, otherwise detect
+let themeValue = (window as any).__themeValue ?? getPreferTheme();
 
 function setPreference(): void {
   localStorage.setItem(THEME, themeValue);
@@ -33,6 +31,16 @@ function reflectPreference(): void {
   document.firstElementChild?.setAttribute("data-theme", themeValue);
 
   document.querySelector("#theme-btn")?.setAttribute("aria-label", themeValue);
+
+  const moon = document.querySelector("#theme-icon-moon");
+  const sun = document.querySelector("#theme-icon-sun");
+  if (themeValue === DARK) {
+    moon?.classList.add("hidden");
+    sun?.classList.remove("hidden");
+  } else {
+    sun?.classList.add("hidden");
+    moon?.classList.remove("hidden");
+  }
 
   // Get a reference to the body element
   const body = document.body;

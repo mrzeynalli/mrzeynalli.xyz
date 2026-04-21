@@ -39,32 +39,3 @@ const iconMap: Record<string, string> = {
 
 </div>
 
-<script is:inline>
-  (function () {
-    const html = document.documentElement;
-    const btn = document.getElementById("theme-toggle");
-    const moon = document.getElementById("theme-icon-moon");
-    const sun = document.getElementById("theme-icon-sun");
-
-    function applyTheme(theme) {
-      html.setAttribute("data-theme", theme);
-      localStorage.setItem("theme", theme);
-      if (theme === "dark") {
-        moon.classList.add("hidden");
-        sun.classList.remove("hidden");
-      } else {
-        sun.classList.add("hidden");
-        moon.classList.remove("hidden");
-      }
-    }
-
-    // Apply saved theme on load
-    const saved = localStorage.getItem("theme");
-    if (saved) applyTheme(saved);
-
-    btn.addEventListener("click", () => {
-      const current = html.getAttribute("data-theme");
-      applyTheme(current === "dark" ? "lofi" : "dark");
-    });
-  })();
-</script>

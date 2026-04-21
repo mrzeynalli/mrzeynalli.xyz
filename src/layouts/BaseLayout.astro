@@ -48,6 +48,20 @@ const {
 
     <slot name="head" />
     <ClientRouter />
+
+    <!-- Prevent flash of unstyled content: apply saved theme before first paint -->
+    <script is:inline>
+      (function () {
+        const saved = localStorage.getItem("theme");
+        const theme = saved
+          ? saved
+          : window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "lofi";
+        document.documentElement.setAttribute("data-theme", theme);
+        window.__themeValue = theme;
+      })();
+    </script>
   </head>
   <body>
     <div class="bg-base-100 drawer lg:drawer-open">
@@ -72,12 +86,6 @@ const {
       <SideBar sideBarActiveItemID={sideBarActiveItemID} />
     </div>
 
-    <!-- Theme toggle script -->
-    <script is:inline>
-      (function () {
-        const saved = localStorage.getItem("theme");
-        if (saved) document.documentElement.setAttribute("data-theme", saved);
-      })();
-    </script>
+    <script src="../scripts/theme.ts"></script>
   </body>
 </html>
